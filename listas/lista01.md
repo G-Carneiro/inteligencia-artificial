@@ -64,10 +64,10 @@ TipodeVitimas(Albert_Fish, crianças).
 TipodeVitimas(John_Wayne_Gacy, garotos_jovens). 
 TipodeVitimas(Belle_Gunness, maridos_e_crianças).
 
-Caracteristica(Jeffrey_Dahmer, canibalismo). 
+Caracteristica(Jeffrey_Dahmer, canibal). 
 Caracteristica(Albert_Fish, pedofilo_cronico). 
 Caracteristica(John_Wayne_Gacy, torturador). 
-Caracteristica(Belle_Gunness, selvageria_extrema).
+Caracteristica(Belle_Gunness, extremamente_selvagem).
 ```
 
 ### Redes Semânticas
