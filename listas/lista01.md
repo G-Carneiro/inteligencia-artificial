@@ -34,3 +34,40 @@ Não se sabe ao certo o número de vítimas de Belle Gunness, alguns dizem que f
 Ela ficou conhecida na época como lady barba azul.
 
 **Referência:**  Livro Serial Killers Anatomia do Mal - Harold Schechter.
+
+
+## 2. Apresente a representação feita em cada uma das técnicas
+
+### Lógica
+
+```prolog
+
+SerialKiller(Jeffrey_Dahmer).
+SerialKiller(Albert_Fish).
+SerialKiller(John_Wayne_Gacy).
+SerialKiller(Belle_Gunness).
+
+Apelido(Jeffrey_Dahmer, Canibal_de_Milwaukee).
+Apelido(Albert_Fish, Maníaco_da_Lua).
+Apelido(John_Wayne_Gacy, Palhaço_Assassino).
+Apelido(Belle_Gunness, Lady_Barba_Azul).
+
+TotaldeVitimas(Jeffrey_Dahmer, 17).
+TotaldeVitimas(Albert_Fish, 15).
+TotaldeVitimas(John_Wayne_Gacy, 33).
+TotaldeVitimas(John_Wayne_Gacy, de 10 à 42).
+
+TipodeVitimas(Jeffrey_Dahmer, garotos_jovens). 
+TipodeVitimas(Albert_Fish, crianças). 
+TipodeVitimas(John_Wayne_Gacy, garotos_jovens). 
+TipodeVitimas(Belle_Gunness, maridos_e_crianças).
+
+Caracteristica(Jeffrey_Dahmer, canibalismo). 
+Caracteristica(Albert_Fish, pedófilo_crônico). 
+Caracteristica(John_Wayne_Gacy, torturador). 
+Caracteristica(Belle_Gunness, selvageria_extrema).
+```
+
+### Redes Semânticas
+
+### Quadros (Frames)
