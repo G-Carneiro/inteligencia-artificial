@@ -1,5 +1,9 @@
 # Lista 01 - Representação de Conhecimento
 
+**Gabriel Medeiros Lopes Carneiro (19103977)**
+
+**Mikaella Cristina Bernardo Vieira (18103860)**
+
 ## 1. Apresente o texto usado
 
 Uma vez que o termo “serial killer” foi inventado para descrever um tipo específico de criminoso, mas o termo é cercado de confusão. Nem os especialistas estão de acordo. 
@@ -71,5 +75,30 @@ Caracteristica(Belle_Gunness, extremamente_selvagem).
 ```
 
 ### Redes Semânticas
+
+**Obs:** representaremos os arcos com texto em **negrito**.
+
+- Jeffrey_Dahmer **is a** SerialKiller.
+- Albert_Fish **is a** SerialKiller.
+- John_Wayne_Gacy **is a** SerialKiller.
+- Belle_Gunness **is a** SerialKiller.
+- Jeffrey_Dahmer **Apelido** Canibal_de_Milwaukee.
+- Albert_Fish **Apelido** Maniaco_da_Lua.
+- John_Wayne_Gacy **Apelido** Palhaco_Assassino.
+- Belle_Gunness **Apelido** Lady_Barba_Azul.
+- Jeffrey_Dahmer **TotaldeVitimas** 17.
+- Albert_Fish **TotaldeVitimas** 15.
+- John_Wayne_Gacy **TotaldeVitimas** 33.
+- Belle_Gunness **MinimodeVitimas** 10.
+- Belle_Gunness **MaximodeVitimas** 42.
+- Jeffrey_Dahmer **TipodeVitimas** garotos_jovens.
+- Albert_Fish **TipodeVitimas** crianças.
+- John_Wayne_Gacy **TipodeVitimas** garotos_jovens.
+- Belle_Gunness **TipodeVitimas** maridos_e_crianças.
+- Jeffrey_Dahmer **Caracteristica** canibal.
+- Albert_Fish **Caracteristica** pedofilo_cronico.
+- John_Wayne_Gacy **Caracteristica** torturador.
+- Belle_Gunness **Caracteristica** extremamente_selvagem.
+
 
 ### Quadros (Frames)
