@@ -6,9 +6,11 @@
 
 ## 1. Apresente o texto usado
 
-Uma vez que o termo “serial killer” foi inventado para descrever um tipo específico de criminoso, mas o termo é cercado de confusão. Nem os especialistas estão de acordo. 
-Então vamos começar com a definição do FBI (**Três ou mais eventos separados em três ou mais locais distintos com período de “calmaria” entre os homicídios**).
-Essa definição enfatiza três elementos: a quantidade (onde tem de haver pelo menos três homicídios), o lugar (Os assassinatos têm que ocorrer em locais diferentes) e o tempo (tem de haver um “período de calmaria” - um intervalo entre os assassinatos que pode durar algumas horas a vários anos).
+[//]: # (Uma vez que o termo “serial killer” foi inventado para descrever um tipo específico de criminoso, mas o termo é cercado de confusão. Nem os especialistas estão de acordo. )
+
+[//]: # (Então vamos começar com a definição do FBI &#40;**Três ou mais eventos separados em três ou mais locais distintos com período de “calmaria” entre os homicídios**&#41;.)
+
+[//]: # (Essa definição enfatiza três elementos: a quantidade &#40;onde tem de haver pelo menos três homicídios&#41;, o lugar &#40;Os assassinatos têm que ocorrer em locais diferentes&#41; e o tempo &#40;tem de haver um “período de calmaria” - um intervalo entre os assassinatos que pode durar algumas horas a vários anos&#41;.)
 
 Talvez o horror pudesse ter sido evitado.
 Certamente, sinais de alerta apareceram ao longo do caminho - sinais de que havia algo de errado com Jeffrey Dahmer. 
@@ -64,7 +66,7 @@ MinimodeVitimas(Belle_Gunness, 10).
 MaximodeVitimas(Belle_Gunness, 42).
 
 TipodeVitimas(Jeffrey_Dahmer, garotos_jovens). 
-TipodeVitimas(Albert_Fish, crianças). 
+TipodeVitimas(Albert_Fish, criancas). 
 TipodeVitimas(John_Wayne_Gacy, garotos_jovens). 
 TipodeVitimas(Belle_Gunness, maridos_e_crianças).
 
@@ -102,3 +104,35 @@ Caracteristica(Belle_Gunness, extremamente_selvagem).
 
 
 ### Quadros (Frames)
+
+```
+(Jeffrey_Dahmer
+    <:INSTANCE-OF SerialKiller>
+    <:Apelido Canibal_de_Milwaukee>
+    <:TotaldeVitimas 17>
+    <:TipodeVitimas garotos_jovens>
+    <:Caracteristica canibal>
+)
+(Albert_Fish
+    <:INSTANCE-OF SerialKiller>
+    <:Apelido Maniaco_da_Lua>
+    <:TotaldeVitimas 15>
+    <:TipodeVitimas criancas>
+    <:Caracteristica pedofilo_cronico>
+)
+(John_Wayne_Gacy
+    <:INSTANCE-OF SerialKiller>
+    <:Apelido Palhaco_Assassino>
+    <:TotaldeVitimas 33>
+    <:TipodeVitimas garotos_jovens>
+    <:Caracteristica torturador>
+)
+(Belle_Gunness
+    <:INSTANCE-OF SerialKiller>
+    <:Apelido Lady_Barba_Azul>
+    <:MinimodeVitimas 10>
+    <:MaximodeVitimas 42>
+    <:TipodeVitimas maridos_e_crianças>
+    <:Caracteristica extremamente_selvagem>
+)
+```
