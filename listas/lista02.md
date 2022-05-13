@@ -171,3 +171,9 @@ c. $∃x. (P(x) ∧ Q(x)) → (∃x. P(x) ∧ ∃x. Q(x))$
     (5)     &   \square   &   \text{de (2) e (4) com } θ: \{x_3/a\}
     \end{array}
     $$
+
+## 3. Prove os seguintes teoremas utilizando o método de Tableaux (lembre-se denegar o teorema):
+
+a. $(P ∨ ¬Q) → ¬(P → Q)$
+b. $∃x.(P(x) ∧ Q(x)) → (∃x. P(x) ∧ ∃x. Q(x))$
+c. $∀x.(P(x) ∨ Q(x)) → (∃x. P(x) ∨ ∀x. Q(x))$
