@@ -11,25 +11,25 @@
 Negando o teorema
 
 $$
-¬((P ∧ (¬Q \lor R)) \to ((P ∧ ¬Q) \lor (P ∧ R)))
+¬((P ∧ (¬Q ∨ R)) \to ((P ∧ ¬Q) ∨ (P ∧ R)))
 $$
 
 Eliminando implicação
 
 $$
-¬(¬(P ∧ (¬Q \lor R)) \lor ((P ∧ ¬Q) \lor (P ∧ R)))
+¬(¬(P ∧ (¬Q ∨ R)) ∨ ((P ∧ ¬Q) ∨ (P ∧ R)))
 $$
 
 Redução do escopo das negações
 
 $$
 \begin{matrix}
-¬((¬P \lor ¬(¬Q \lor R)) \lor ((P ∧ ¬Q) \lor (P ∧ R))) \\ \\
-¬((¬P \lor (Q ∧ ¬R)) \lor ((P ∧ ¬Q) \lor (P ∧ R))) \\ \\
-¬(¬P \lor (Q ∧ ¬R)) ∧ ¬((P ∧ ¬Q) \lor (P ∧ R)) \\ \\
+¬((¬P ∨ ¬(¬Q ∨ R)) ∨ ((P ∧ ¬Q) ∨ (P ∧ R))) \\ \\
+¬((¬P ∨ (Q ∧ ¬R)) ∨ ((P ∧ ¬Q) ∨ (P ∧ R))) \\ \\
+¬(¬P ∨ (Q ∧ ¬R)) ∧ ¬((P ∧ ¬Q) ∨ (P ∧ R)) \\ \\
 (P ∧ ¬(Q ∧ ¬R)) ∧ (¬(P ∧ ¬Q) ∧ ¬(P ∧ R)) \\ \\
-(P ∧ (¬Q \lor R)) ∧ ((¬P \lor Q) ∧ (¬P \lor ¬R)) \\ \\
-P ∧ (¬Q \lor R) ∧ (¬P \lor Q) ∧ (¬P \lor ¬R) \\ \\
+(P ∧ (¬Q ∨ R)) ∧ ((¬P ∨ Q) ∧ (¬P ∨ ¬R)) \\ \\
+P ∧ (¬Q ∨ R) ∧ (¬P ∨ Q) ∧ (¬P ∨ ¬R) \\ \\
 \end{matrix}
 $$
 
@@ -38,9 +38,9 @@ Conjunto $G$:
 $$
 \begin{array}{ll}
 (1)     &   P \\
-(2)     &   ¬Q \lor R \\
-(3)     &   ¬P \lor Q \\
-(4)     &   ¬P \lor ¬R
+(2)     &   ¬Q ∨ R \\
+(3)     &   ¬P ∨ Q \\
+(4)     &   ¬P ∨ ¬R
 \end{array}
 $$
 
@@ -48,7 +48,7 @@ Resolução:
 
 $$
 \begin{array}{lll}
-(5)     &   R \lor ¬P   & \text{ de } (2) \text{ e } (3) \\
+(5)     &   R ∨ ¬P   & \text{ de } (2) \text{ e } (3) \\
 (6)     &   ¬P          & \text{ de } (5) \text{ e } (4) \\
 (7)     &   \square         & \text{ de } (6) \text{ e } (1)
 \end{array}
