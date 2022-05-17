@@ -11,25 +11,25 @@
 Negando o teorema
 
 $$
-¬((P \land (¬Q \lor R)) \to ((P \land ¬Q) \lor (P \land R)))
+¬((P ∧ (¬Q \lor R)) \to ((P ∧ ¬Q) \lor (P ∧ R)))
 $$
 
 Eliminando implicação
 
 $$
-¬(¬(P \land (¬Q \lor R)) \lor ((P \land ¬Q) \lor (P \land R)))
+¬(¬(P ∧ (¬Q \lor R)) \lor ((P ∧ ¬Q) \lor (P ∧ R)))
 $$
 
 Redução do escopo das negações
 
 $$
 \begin{matrix}
-¬((¬P \lor ¬(¬Q \lor R)) \lor ((P \land ¬Q) \lor (P \land R))) \\ \\
-¬((¬P \lor (Q \land ¬R)) \lor ((P \land ¬Q) \lor (P \land R))) \\ \\
-¬(¬P \lor (Q \land ¬R)) \land ¬((P \land ¬Q) \lor (P \land R)) \\ \\
-(P \land ¬(Q \land ¬R)) \land (¬(P \land ¬Q) \land ¬(P \land R)) \\ \\
-(P \land (¬Q \lor R)) \land ((¬P \lor Q) \land (¬P \lor ¬R)) \\ \\
-P \land (¬Q \lor R) \land (¬P \lor Q) \land (¬P \lor ¬R) \\ \\
+¬((¬P \lor ¬(¬Q \lor R)) \lor ((P ∧ ¬Q) \lor (P ∧ R))) \\ \\
+¬((¬P \lor (Q ∧ ¬R)) \lor ((P ∧ ¬Q) \lor (P ∧ R))) \\ \\
+¬(¬P \lor (Q ∧ ¬R)) ∧ ¬((P ∧ ¬Q) \lor (P ∧ R)) \\ \\
+(P ∧ ¬(Q ∧ ¬R)) ∧ (¬(P ∧ ¬Q) ∧ ¬(P ∧ R)) \\ \\
+(P ∧ (¬Q \lor R)) ∧ ((¬P \lor Q) ∧ (¬P \lor ¬R)) \\ \\
+P ∧ (¬Q \lor R) ∧ (¬P \lor Q) ∧ (¬P \lor ¬R) \\ \\
 \end{matrix}
 $$
 
@@ -113,13 +113,13 @@ $$
 Negando o teorema
 
 $$
-¬(\exists x. (P(x) \land Q(x)) \to (∃ x. P(x) ∧ \exists x. Q(x)))
+¬(\exists x. (P(x) ∧ Q(x)) \to (∃ x. P(x) ∧ \exists x. Q(x)))
 $$
 
 Eliminando implicação
 
 $$
-¬(¬(\exists x. (P(x) \land Q(x))) ∨ (∃ x. P(x) ∧ \exists x. Q(x)))
+¬(¬(\exists x. (P(x) ∧ Q(x))) ∨ (∃ x. P(x) ∧ \exists x. Q(x)))
 $$
 
 Redução do escopo das negações
