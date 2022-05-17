@@ -113,13 +113,13 @@ $$
 Negando o teorema
 
 $$
-¬(\exists x. (P(x) ∧ Q(x)) → (∃ x. P(x) ∧ \exists x. Q(x)))
+¬(∃x. (P(x) ∧ Q(x)) → (∃ x. P(x) ∧ ∃x. Q(x)))
 $$
 
 Eliminando implicação
 
 $$
-¬(¬(\exists x. (P(x) ∧ Q(x))) ∨ (∃ x. P(x) ∧ \exists x. Q(x)))
+¬(¬(∃x. (P(x) ∧ Q(x))) ∨ (∃ x. P(x) ∧ ∃x. Q(x)))
 $$
 
 Redução do escopo das negações
