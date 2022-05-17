@@ -13,5 +13,5 @@ sudo apt install pandoc texlive-xetex
 ### Convert
 
 ```
-pandoc file.md -o fila.pdf --pdf-engine=xelatex
+pandoc file.md -o file.pdf --pdf-engine=xelatex
 ```

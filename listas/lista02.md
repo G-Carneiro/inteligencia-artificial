@@ -48,9 +48,9 @@ Resolução:
 
 $$
 \begin{array}{lll}
-(5)     &   R ∨ ¬P   & \text{ de } (2) \text{ e } (3) \\
-(6)     &   ¬P          & \text{ de } (5) \text{ e } (4) \\
-(7)     &   \square         & \text{ de } (6) \text{ e } (1)
+(5)     &   R ∨ ¬P      & \text{de (2) e (3)} \\
+(6)     &   ¬P          & \text{de (5) e (4)} \\
+(7)     &   \square     & \text{de (6) e (1)}
 \end{array}
 $$
 
@@ -113,13 +113,13 @@ $$
 Negando o teorema
 
 $$
-¬(∃x. (P(x) ∧ Q(x)) → (∃ x. P(x) ∧ ∃x. Q(x)))
+¬(∃x. (P(x) ∧ Q(x)) → (∃x. P(x) ∧ ∃x. Q(x)))
 $$
 
 Eliminando implicação
 
 $$
-¬(¬(∃x. (P(x) ∧ Q(x))) ∨ (∃ x. P(x) ∧ ∃x. Q(x)))
+¬(¬(∃x. (P(x) ∧ Q(x))) ∨ (∃x. P(x) ∧ ∃x. Q(x)))
 $$
 
 Redução do escopo das negações
