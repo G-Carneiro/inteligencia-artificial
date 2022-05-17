@@ -11,7 +11,7 @@
 Negando o teorema
 
 $$
-¬((P ∧ (¬Q ∨ R)) \to ((P ∧ ¬Q) ∨ (P ∧ R)))
+¬((P ∧ (¬Q ∨ R)) → ((P ∧ ¬Q) ∨ (P ∧ R)))
 $$
 
 Eliminando implicação
@@ -113,7 +113,7 @@ $$
 Negando o teorema
 
 $$
-¬(\exists x. (P(x) ∧ Q(x)) \to (∃ x. P(x) ∧ \exists x. Q(x)))
+¬(\exists x. (P(x) ∧ Q(x)) → (∃ x. P(x) ∧ \exists x. Q(x)))
 $$
 
 Eliminando implicação
