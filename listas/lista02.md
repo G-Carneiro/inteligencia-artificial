@@ -11,25 +11,25 @@
 Negando o teorema
 
 $$
-\neg ((P \land (\neg Q \lor R)) \to ((P \land \neg Q) \lor (P \land R)))
+¬((P \land (¬Q \lor R)) \to ((P \land ¬Q) \lor (P \land R)))
 $$
 
 Eliminando implicação
 
 $$
-\neg (\neg (P \land (\neg Q \lor R)) \lor ((P \land \neg Q) \lor (P \land R)))
+¬(¬(P \land (¬Q \lor R)) \lor ((P \land ¬Q) \lor (P \land R)))
 $$
 
 Redução do escopo das negações
 
 $$
 \begin{matrix}
-\neg ((\neg P \lor \neg (\neg Q \lor R)) \lor ((P \land \neg Q) \lor (P \land R))) \\ \\
-\neg ((\neg P \lor (Q \land \neg R)) \lor ((P \land \neg Q) \lor (P \land R))) \\ \\
-\neg (\neg P \lor (Q \land \neg R)) \land \neg ((P \land \neg Q) \lor (P \land R)) \\ \\
-(P \land \neg (Q \land \neg R)) \land (\neg (P \land \neg Q) \land \neg (P \land R)) \\ \\
-(P \land (\neg Q \lor R)) \land ((\neg P \lor Q) \land (\neg P \lor \neg R)) \\ \\
-P \land (\neg Q \lor R) \land (\neg P \lor Q) \land (\neg P \lor \neg R) \\ \\
+¬((¬P \lor ¬(¬Q \lor R)) \lor ((P \land ¬Q) \lor (P \land R))) \\ \\
+¬((¬P \lor (Q \land ¬R)) \lor ((P \land ¬Q) \lor (P \land R))) \\ \\
+¬(¬P \lor (Q \land ¬R)) \land ¬((P \land ¬Q) \lor (P \land R)) \\ \\
+(P \land ¬(Q \land ¬R)) \land (¬(P \land ¬Q) \land ¬(P \land R)) \\ \\
+(P \land (¬Q \lor R)) \land ((¬P \lor Q) \land (¬P \lor ¬R)) \\ \\
+P \land (¬Q \lor R) \land (¬P \lor Q) \land (¬P \lor ¬R) \\ \\
 \end{matrix}
 $$
 
@@ -38,9 +38,9 @@ Conjunto $G$:
 $$
 \begin{array}{ll}
 (1)     &   P \\
-(2)     &   \neg Q \lor R \\
-(3)     &   \neg P \lor Q \\
-(4)     &   \neg P \lor \neg R
+(2)     &   ¬Q \lor R \\
+(3)     &   ¬P \lor Q \\
+(4)     &   ¬P \lor ¬R
 \end{array}
 $$
 
@@ -48,8 +48,8 @@ Resolução:
 
 $$
 \begin{array}{lll}
-(5)     &   R \lor \neg P   & \text{ de } (2) \text{ e } (3) \\
-(6)     &   \neg P          & \text{ de } (5) \text{ e } (4) \\
+(5)     &   R \lor ¬P   & \text{ de } (2) \text{ e } (3) \\
+(6)     &   ¬P          & \text{ de } (5) \text{ e } (4) \\
 (7)     &   \square         & \text{ de } (6) \text{ e } (1)
 \end{array}
 $$
@@ -113,13 +113,13 @@ $$
 Negando o teorema
 
 $$
-\neg (\exists x. (P(x) \land Q(x)) \to (∃ x. P(x) ∧ \exists x. Q(x)))
+¬(\exists x. (P(x) \land Q(x)) \to (∃ x. P(x) ∧ \exists x. Q(x)))
 $$
 
 Eliminando implicação
 
 $$
-\neg (\neg (\exists x. (P(x) \land Q(x))) ∨ (∃ x. P(x) ∧ \exists x. Q(x)))
+¬(¬(\exists x. (P(x) \land Q(x))) ∨ (∃ x. P(x) ∧ \exists x. Q(x)))
 $$
 
 Redução do escopo das negações
