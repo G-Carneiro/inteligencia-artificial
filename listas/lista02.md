@@ -4,6 +4,59 @@
 
 **Mikaella Cristina Bernardo Vieira (18103860)**
 
+## 1. Prove algo referente a lista 1.
+
+
+Seja `SerialKiller(x) = SK(x)`, `Apelido(x, y) = A(x, y)` e `TotaldeVitimas(x, z) = TV(x, z)`, onde `x` representa o serial killer, `y` o seu apelido e `z` o número de vítimas.
+
+Do texto, sabe-se que conjunto $G$ é:
+
+$$
+\begin{array}{ll}
+(1)     &   \text{SK(Albert\_Fish)}                 \\
+(2)     &   \text{A(Albert\_Fish, Maniaco\_da\_Lua)} \\
+(3)     &   \text{TV(Albert\_Fish, 15)}             \\
+\end{array}
+$$
+
+Provaremos que Albert Fish é um serial killer que matou 15 vítimas, e cujo apelido era Maníaco da Lua.
+Logo,
+
+$$
+W = \text{SK(Albert\_Fish)} ∧ \text{A(Albert\_Fish, Maniaco\_da\_Lua)} ∧ TV(Albert\_Fish, 15)
+$$
+
+Negando $W$:
+
+$$
+\begin{matrix}
+¬(\text{SK(Albert\_Fish)} ∧ \text{A(Albert\_Fish, Maniaco\_da\_Lua)} ∧ \text{TV(Albert\_Fish, 15)}) \\ \\
+¬\text{SK(Albert\_Fish)} ∨ ¬\text{A(Albert\_Fish, Maniaco\_da\_Lua)} ∨ ¬\text{TV(Albert\_Fish, 15)}
+\end{matrix}
+$$
+
+Tem-se $H = G ∪ \{¬W\}$:
+
+$$
+\begin{array}{ll}
+(1)     &   \text{SK(Albert\_Fish)}                     \\
+(2)     &   \text{A(Albert\_Fish, Maniaco\_da\_Lua)}    \\
+(3)     &   \text{TV(Albert\_Fish, 15)}                 \\
+(4)     &   ¬\text{SK(Albert\_Fish)} ∨ ¬\text{A(Albert\_Fish, Maniaco\_da\_Lua)} ∨ ¬\text{TV(Albert\_Fish, 15)}
+\end{array}
+$$
+
+
+Resolução:
+
+$$
+\begin{array}{lll}
+(5)     &   ¬\text{A(Albert\_Fish, Maniaco\_da\_Lua)} ∨ ¬\text{TV(Albert\_Fish, 15)}    &   \text{de (1) e (4)} \\
+(6)     &   ¬\text{TV(Albert\_Fish, 15)}    &   \text{de (2) e (5)} \\
+(7)     &   \square   & \text{de (3) e (6)}
+\end{array}
+$$
+
 ## 2. Prove os seguintes teoremas utilizando o método da Resolução (lembre-se de negar o teorema):
 
 ### a. $(P ∧ (¬Q ∨ R)) → ((P ∧ ¬Q) ∨ (P ∧ R))$
