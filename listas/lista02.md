@@ -230,17 +230,32 @@ $$
 
 $$
 \begin{array}{llllll}
-(1)     &   ¬((P ∨ ¬Q) → ¬(P → Q))  &   \text{Negando o teorema}                                                \\
-(2)     &   P ∧ ¬Q                  &   \text{de (1) R.C. } →                                                   \\
-(3)     &   P → Q                   &   \text{de (1) R.C. } →                                                   \\
-(4)     &   P                       &   \text{de (2) R.C. } ∧                                                   \\
-(5)     &   ¬Q                      &   \text{de (2) R.C. } ∧                                                   \\
-(6)     &   ¬P                      &   \text{de (3) R.D. } →   &   ∣   &   Q       &   \text{de (3) R.D. } →   \\
-(7)     &   \square                 &   \text{de (4) e (6)}     &   ∣   &   \square &   \text{de (5) e (6)}
+(1) &   ¬((P ∨ ¬Q) → ¬(P → Q))  &   \text{Negando o teorema}                                                \\
+(2) &   P ∧ ¬Q                  &   \text{de (1) R.C. } →                                                   \\
+(3) &   P → Q                   &   \text{de (1) R.C. } →                                                   \\
+(4) &   P                       &   \text{de (2) R.C. } ∧                                                   \\
+(5) &   ¬Q                      &   \text{de (2) R.C. } ∧                                                   \\
+(6) &   ¬P                      &   \text{de (3) R.D. } →   &   ∣   &   Q       &   \text{de (3) R.D. } →   \\
+(7) &   \square                 &   \text{de (4) e (6)}     &   ∣   &   \square &   \text{de (5) e (6)}
 \end{array}
 $$
 
-### b. $∃x.(P(x) ∧ Q(x)) → (∃x. P(x) ∧ ∃x. Q(x))$
+### b. $∃x.(P(x) ∧ Q(x)) → (∃x.P(x) ∧ ∃x.Q(x))$
 
+[//]: # (TODO: simplificar)
+$$
+\begin{array}{llllll}
+(1) &   ¬(∃x.(P(x) ∧ Q(x)) → (∃x.P(x) ∧ ∃x.Q(x)))   &   \text{Negando o teorema}        \\
+(2) &   ∃x.(P(x) ∧ Q(x))                            &   \text{de (1) R.C. } →           \\
+(3) &   ¬(∃x.P(x) ∧ ∃x.Q(x))                        &   \text{de (1) R.C. } →           \\
+(4) &   ∃x.P(x)                                     &   \text{de (2) R.C. } ∧           \\
+(5) &   ∃x.Q(x)                                     &   \text{de (2) R.C. } ∧           \\
+(6) &   P(π)                                        &   \text{de (4) R.E. } θ: \{x/π\}  \\
+(7) &   Q(π)                                        &   \text{de (5) R.E. } θ: \{x/π\}  \\
+(8) &   ¬P(π) ∨ ¬Q(π)                               &   \text{de (3) R.E. } θ: \{x/π\}  \\
+(9) &   ¬P(π)                                       &   \text{de (8) R.D. } ∨           &   ∣   &   ¬Q(π)   &   \text{de (8) R.D. } ∨   \\
+(10)&   \square                                     &   \text{de (6) e (9)}             &   ∣   &   \square &   \text{de (7) e (9)}
+\end{array}
+$$
 
 ### c. $∀x.(P(x) ∨ Q(x)) → (∃x. P(x) ∨ ∀x. Q(x))$
