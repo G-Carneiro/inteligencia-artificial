@@ -23,7 +23,7 @@ Provaremos que Albert Fish é um serial killer que matou 15 vítimas, e cujo ape
 Logo,
 
 $$
-W = \text{SK(Albert\_Fish)} ∧ \text{A(Albert\_Fish, Maniaco\_da\_Lua)} ∧ TV(Albert\_Fish, 15)
+W = \text{SK(Albert\_Fish)} ∧ \text{A(Albert\_Fish, Maniaco\_da\_Lua)} ∧ \text{TV(Albert\_Fish, 15)}
 $$
 
 Negando $W$:
@@ -228,6 +228,17 @@ $$
 
 ### a. $(P ∨ ¬Q) → ¬(P → Q)$
 
+$$
+\begin{array}{llllll}
+(1)     &   ¬((P ∨ ¬Q) → ¬(P → Q))  &   \text{Negando o teorema}                                                \\
+(2)     &   P ∧ ¬Q                  &   \text{de (1) R.C. } →                                                   \\
+(3)     &   P → Q                   &   \text{de (1) R.C. } →                                                   \\
+(4)     &   P                       &   \text{de (2) R.C. } ∧                                                   \\
+(5)     &   ¬Q                      &   \text{de (2) R.C. } ∧                                                   \\
+(6)     &   ¬P                      &   \text{de (3) R.D. } →   &   ∣   &   Q       &   \text{de (3) R.D. } →   \\
+(7)     &   \square                 &   \text{de (4) e (6)}     &   ∣   &   \square &   \text{de (5) e (6)}
+\end{array}
+$$
 
 ### b. $∃x.(P(x) ∧ Q(x)) → (∃x. P(x) ∧ ∃x. Q(x))$
 
