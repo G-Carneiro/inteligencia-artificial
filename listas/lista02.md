@@ -260,15 +260,15 @@ $$
 
 $$
 \begin{array}{lllll}
-(1) &   ¬(∀x.(P(x) ∨ Q(x)) → (∃x.P(x) ∨ ∀x.Q(x)))   &       &           &   \text{Negando o teorema}            \\
-(2) &   ∀x.(P(x) ∨ Q(x))                            &       &           &   \text{de (1) R.C. } →               \\
-(3) &   ¬(∃x.P(x) ∨ ∀x.Q(x))                        &       &           &   \text{de (1) R.C. } →               \\
-(4) &   ¬∃x.P(x)                                    &       &           &   \text{de (3) R.C. } ∨               \\
-(5) &   ¬∀x.Q(x)                                    &       &           &   \text{de (3) R.C. } ∨               \\
-(6) &   ¬P(t)                                       &       &           &   \text{de (4) R.E. } θ: \{x/t\}      \\
-(7) &   ¬Q(t)                                       &       &           &   \text{de (5) R.U. } θ: \{x/t\}      \\
-(8) &   P(t) ∨ Q(t)                                 &       &           &   \text{de (2) R.U. } θ: \{x/t\}      \\
-(9) &   P(t)                                        &   ∣   &   Q(t)    &   \text{de (8) R.D. } ∨   \\
+(1) &   ¬(∀x.(P(x) ∨ Q(x)) → (∃x.P(x) ∨ ∀x.Q(x)))   &       &           &   \text{Negando o teorema}        \\
+(2) &   ∀x.(P(x) ∨ Q(x))                            &       &           &   \text{de (1) R.C. } →           \\
+(3) &   ¬(∃x.P(x) ∨ ∀x.Q(x))                        &       &           &   \text{de (1) R.C. } →           \\
+(4) &   ¬∃x.P(x)                                    &       &           &   \text{de (3) R.C. } ∨           \\
+(5) &   ¬∀x.Q(x)                                    &       &           &   \text{de (3) R.C. } ∨           \\
+(6) &   ¬P(t)                                       &       &           &   \text{de (4) R.E. } θ: \{x/t\}  \\
+(7) &   ¬Q(t)                                       &       &           &   \text{de (5) R.U. } θ: \{x/t\}  \\
+(8) &   P(t) ∨ Q(t)                                 &       &           &   \text{de (2) R.U. } θ: \{x/t\}  \\
+(9) &   P(t)                                        &   ∣   &   Q(t)    &   \text{de (8) R.D. } ∨           \\
 (10)&   \square                                     &   ∣   &   \square &   \text{de (6), (7) e (9)}
 \end{array}
 $$
