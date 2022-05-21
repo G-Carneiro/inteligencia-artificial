@@ -20,13 +20,21 @@ header-includes:
 $$
 \begin{forest}
     [A \color{blue}(240) \\ \color{olive}0 + \color{purple}240, align=center
-        [\newnode{B}{73}{73}{186}{259}{left}] 
+        [\newnode{B}{73}{73}{186}{259}{left}%
+            [\newnode{K}{83}{156}{122}{278}{left}]
+        ] 
         [\newnode{C}{64}{64}{182}{246}{left}%
             [\newnode{I}{64}{128}{120}{248}{left}%
                 [\newnode{F}{31}{159}{150}{309}{left}]
-                [\newnode{L}{28}{156}{104}{260}{left}]
+                [\newnode{L}{28}{156}{104}{260}{left}%
+                    [\newnode{H}{36}{192}{139}{331}{left}]
+                    [\newnode{P}{63}{219}{65}{284}{left}]
+                ]
                 [\newnode{M}{20}{148}{100}{248}{left}%
-                    [\newnode{O}{50}{198}{72}{270}{left}]
+                    [\newnode{O}{50}{198}{72}{270}{left}%
+                        [\newnode{P}{41}{239}{65}{304}{left}]
+                        [\newnode{R}{50}{248}{0}{248}{left}]
+                    ]
                 ]
             ]
         ] 
