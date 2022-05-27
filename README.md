@@ -15,3 +15,9 @@ sudo apt install pandoc texlive-xetex
 ```
 pandoc file.md -o file.pdf --pdf-engine=xelatex
 ```
+
+or
+
+```
+ pandoc file.md -o file.pdf --pdf-engine=xelatex -V geometry:landscape
+```
