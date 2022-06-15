@@ -20,11 +20,13 @@ O sistema consegue recomendar um livro conforme as características dadas.
 ## Execução
 
 Compile com
+
 ```
 swipl -o livros livros.pl
 ```
 
-e chame 
+e chame
+
 ```prolog
 suggest(X).
 ```
