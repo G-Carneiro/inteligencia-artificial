@@ -1,3 +1,5 @@
+/* Livros */
+
 livro(uma_mulher_na_escuridao).
 livro(a_garota_no_gelo).
 livro(crepusculo).
@@ -58,13 +60,6 @@ galera(a_vida_invisivel_de_addie_larue).
 
 /* Best Seller */
 
-nBest_seller(uma_mulher_na_escuridao).
-nBest_seller(it_a_coisa).
-nBest_seller(os_sete_maridos_de_evelyn_hugo).
-nBest_seller(arena_treze).
-nBest_seller(por_lugares_incriveis).
-nBest_seller(a_culpa_eh_das_estrelas).
-nBest_seller(a_vida_invisivel_de_addie_larue).
 best_seller(a_garota_no_gelo).
 best_seller(crepusculo).
 best_seller(assassinato_no_expresso_oriente).
@@ -73,14 +68,6 @@ best_seller(harry_potter).
 
  /* Saga */
 
-nSaga(uma_mulher_na_escuridao).
-nSaga(it_a_coisa).
-nSaga(os_sete_maridos_de_evelyn_hugo).
-nSaga(por_lugares_incriveis).
-nSaga(a_culpa_eh_das_estrelas).
-nSaga(a_vida_invisivel_de_addie_larue).
-nSaga(assassinato_no_expresso_oriente).
-nSaga(a_outra_sra_parrish).
 saga(arena_treze).
 saga(a_garota_no_gelo).
 saga(crepusculo).
@@ -128,4 +115,4 @@ retornaLivro("AA", X) :- acao_e_avetura(X), ano2016(X).
 retornaLivro("D", X) :- drama(X), john_green(X).
 retornaLivro("F1", X) :- fantasia(X), saga(X). 
 retornaLivro("F2", X) :- fantasia(X), ano2021(X).
-retornaLivro("S", X) :- suspense(X), harperCollins(X);
+retornaLivro("S", X) :- suspense(X), harperCollins(X).
