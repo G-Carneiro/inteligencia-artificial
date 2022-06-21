@@ -49,3 +49,35 @@ Diga qual a probabilidade da mulher ser portadora do cromossomo da hemofilia $(�
 
 # Em um grupo de 50 turistas temos as seguintes variáveis descritas abaixo:
 
+| Nacionalidade | Masculino | Feminino |
+|---------------|-----------|----------|
+| Brasileira    | 20        | 15       |
+| Estrangeira   | 5         | 10       |
+
+Ao selecionar aleatoriamente uma pessoa do grupo obtenha as probabilidades de ocorrência dos seguintes eventos:
+
+## O turista é brasileiro.
+
+## O turista é estrangeiro.
+
+## O turista é masculino.
+
+## O turista é feminino.
+
+## O turista é feminino e brasileiro.
+
+## O turista é feminino e estrangeiro.
+
+## O turista é masculino e brasileiro.
+
+## O turista é masculino e estrangeiro.
+
+## O turista é feminino ou brasileiro.
+
+## O turista é feminino ou estrangeiro.
+
+## O turista é masculino ou brasileiro.
+
+## O turista é masculino ou estrangeiro.
+
+## O turista ser masculino se é brasileiro.
