@@ -12,12 +12,12 @@ sudo apt install pandoc texlive-xetex
 
 ### Convert
 
-```
+```shell
 pandoc file.md -o file.pdf --pdf-engine=xelatex
 ```
 
 or
 
-```
+```shell
  pandoc file.md -o file.pdf --pdf-engine=xelatex -V geometry:landscape
 ```
