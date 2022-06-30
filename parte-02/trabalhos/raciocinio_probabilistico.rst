@@ -2,6 +2,11 @@
 Trabalho Prático - Raciocínio Probabilístico
 ============================================
 
+**Gabriel Medeiros Lopes Carneiro (19103977)**
+
+**Mikaella Cristina Bernardo Vieira (18103860)**
+
+
 **Parte 1**
 
 #. Qual é a probabilidade de ter NÃO haver uma compra de gasolina dado que o cartão foi fraudado? Mostre os cálculos e as probabilidades que você está computando e dê uma resposta numérica.
