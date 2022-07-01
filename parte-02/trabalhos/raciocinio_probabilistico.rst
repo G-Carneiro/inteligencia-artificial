@@ -6,8 +6,8 @@ Trabalho Prático - Raciocínio Probabilístico
 
 **Mikaella Cristina Bernardo Vieira (18103860)**
 
-
-**Parte 1**
+Parte 1
+=======
 
 #. Qual é a probabilidade de ter NÃO haver uma compra de gasolina dado que o cartão foi fraudado? Mostre os cálculos e as probabilidades que você está computando e dê uma resposta numérica.
 
@@ -21,8 +21,8 @@ Trabalho Prático - Raciocínio Probabilístico
 
 #. Qual a probabilidade um cartão de crédito ter sido fraudado, dado que houve a compra de créditos para celular, mas não houve a compra de gasolina nas últimas 24 horas? Mostre os cálculos e as probabilidades que você está computando e dê uma resposta numérica.
 
-
-**Parte 2**
+Parte 2
+=======
 
 #. Modele a situação anterior com uma Rede Bayesiana, indicando as variáveis aleatórias, seus domínios, topologia da rede e tabelas de probabilidade condicionais.
 
