@@ -37,7 +37,9 @@ Parte 1
         P(\text{F=s, G=s, I>50, S=f, C=n}) = 0.1 * 0.2 * 0.35 * 0.5 * 0.05 = 0.000175
 
 
-#. Qual a probabilidade de haver uma compra de gasolina nas últimas 24 horas?Mostre os cálculos e as probabilidades que você está computando e dê uma resposta numérica.
+#. Qual a probabilidade de haver uma compra de gasolina nas últimas 24 horas? Mostre os cálculos e as probabilidades que você está computando e dê uma resposta numérica.
+
+    P(G=s) = (20 + 1) / (20 + 1 + 80 + 99) = 0.105
 
 #. Qual a probabilidade de haver uma compra de créditos para celular nas últimas 24 horas? Mostre os cálculos e as probabilidades que você está computando e dê uma resposta numérica.
 
