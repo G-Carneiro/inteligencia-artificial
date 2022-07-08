@@ -11,15 +11,31 @@ Parte 1
 
 #. Qual é a probabilidade de ter NÃO haver uma compra de gasolina dado que o cartão foi fraudado? Mostre os cálculos e as probabilidades que você está computando e dê uma resposta numérica.
 
-    .. math::
-
-        \begin{matrix}
-            P(\text{G=não | F=sim}) &=& P(\text{G=não \^{} F=sim}) / P(\text{F=sim}) \\
-        &=& (80/200) / (100/200) \\
-        &=& 0.8
-        \end{matrix}
+    P(G=n | F=s) = 80 / 100 = 0.8
 
 #. Qual a probabilidade do mundo estar no seguinte estado: (F=sim, G=sim, I>50, S=fem, C=não)? Mostre os cálculos e as probabilidades que você está computando e dê uma resposta numérica.
+
+    Como
+
+    .. math::
+
+        P(\text{F=s, G=s, I>50, S=f, C=n}) = P(\text{F=s}) * P(\text{G=s | F=s}) \\
+        * P(\text{I>50}) * P(\text{S=f}) * P(\text{C=n | F=s, I>50, S=f})
+
+    precisamos calcular cada uma dessas probabilidades.
+
+    - P(F=s) = 0.1
+    - P(G=s | F=s) = 0.2
+    - P(I>50) = 0.35
+    - P(S=f) = 0.5
+    - P(C=n | F=s, I>50, S=f) = 0.05
+
+    Logo,
+
+    .. math::
+
+        P(\text{F=s, G=s, I>50, S=f, C=n}) = 0.1 * 0.2 * 0.35 * 0.5 * 0.05 = 0.000175
+
 
 #. Qual a probabilidade de haver uma compra de gasolina nas últimas 24 horas?Mostre os cálculos e as probabilidades que você está computando e dê uma resposta numérica.
 
