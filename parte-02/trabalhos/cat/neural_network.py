@@ -42,12 +42,12 @@ y_test = to_categorical(y_test, num_classes)
 
 model = Sequential()
 model.add(layers.Flatten())
-model.add(Dense(550, kernel_initializer="random_uniform",
-                bias_initializer="random_uniform", activation="sigmoid"))
+model.add(Dense(10, kernel_initializer="random_uniform",
+                bias_initializer="random_uniform", activation="tanh"))
 model.add(Dense(2, kernel_initializer="random_uniform",
                 bias_initializer="random_uniform", activation="softmax"))
 
-optimizer = keras.optimizers.SGD(learning_rate=0.015)
+optimizer = keras.optimizers.SGD(learning_rate=0.005)
 model.compile(optimizer=optimizer, loss="categorical_crossentropy", metrics=["accuracy"])
 input_shape = x_train.shape
 model.build(input_shape)
@@ -58,7 +58,7 @@ num_train = np.size(xtr, 0)
 print(num_train)
 
 results = model.fit(xtr, ytr, validation_data=(xval, yval),
-                    batch_size=num_train, epochs=400, verbose=1)
+                    batch_size=64, epochs=450, verbose=1)
 
 acc = results.history['accuracy']
 val_acc = results.history['val_accuracy']
