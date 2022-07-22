@@ -1,25 +1,20 @@
-import numpy as np
-import pandas as pd
-import os
 import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
-# import seaborn as sns
-
-from sklearn.metrics import confusion_matrix
-from sklearn.model_selection import train_test_split
-
-import tensorflow as tf
-from tensorflow import keras
+import numpy as np
+from h5py import File
 from keras import layers
 from keras.layers import Dense
 from keras.models import Sequential
 from keras.utils import to_categorical
-from h5py import File
+from sklearn.metrics import ConfusionMatrixDisplay, accuracy_score
+from sklearn.model_selection import train_test_split
+from tensorflow import keras
 
 _, x_test, y_test = File("data/test_catvnoncat.h5", "r").values()
 _, x_train, y_train = File("data/train_catvnoncat.h5", "r").values()
 x_train, y_train = x_train[()], y_train[()]
 x_test, y_test = x_test[()], y_test[()]
+x_train = x_train / 255
+x_test = x_test / 255
 
 print(x_test.shape)
 print(y_test.shape)
@@ -27,14 +22,6 @@ print(y_test.shape)
 print(x_train.shape)
 print(y_train.shape)
 
-# plt.figure(figsize=(15, 15))
-# for i in range(20):
-#     ax = plt.subplot(4, 5, i + 1)
-#     plt.imshow(x_train[i+10])
-#     ax.get_xaxis().set_visible(False)
-#     ax.get_yaxis().set_visible(False)
-#
-# plt.show()
 
 num_classes = 2
 y_train = to_categorical(y_train, num_classes)
@@ -42,7 +29,7 @@ y_test = to_categorical(y_test, num_classes)
 
 model = Sequential()
 model.add(layers.Flatten())
-model.add(Dense(10, kernel_initializer="random_uniform",
+model.add(Dense(100, kernel_initializer="random_uniform",
                 bias_initializer="random_uniform", activation="tanh"))
 model.add(Dense(2, kernel_initializer="random_uniform",
                 bias_initializer="random_uniform", activation="softmax"))
@@ -58,7 +45,7 @@ num_train = np.size(xtr, 0)
 print(num_train)
 
 results = model.fit(xtr, ytr, validation_data=(xval, yval),
-                    batch_size=64, epochs=450, verbose=1)
+                    batch_size=64, epochs=200, verbose=1)
 
 acc = results.history['accuracy']
 val_acc = results.history['val_accuracy']
@@ -78,3 +65,7 @@ plt.title('Training and Validation loss')
 plt.legend()
 
 plt.show()
+
+y_test_pred = model.predict(x_test)
+print('\nAccuracy: {:.4f}\n'.format(accuracy_score(y_test.argmax(axis=1), y_test_pred.argmax(axis=1))))
+ConfusionMatrixDisplay.from_predictions(y_test.argmax(axis=1), y_test_pred.argmax(axis=1))

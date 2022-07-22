@@ -3,7 +3,8 @@ import matplotlib.pyplot as plt
 import h5py
 from sklearn.metrics import ConfusionMatrixDisplay
 
-##funcao propagacao que calcula a funcao de custo do gradiente
+
+# funcao propagacao que calcula a funcao de custo do gradiente
 def propagate(w, b, X, Y):
     m = X.shape[1]
     A = sigmoid(np.dot(w.T, X) + b)
@@ -17,6 +18,7 @@ def propagate(w, b, X, Y):
              "db": db}
     return grads, cost
 
+
 ##otimizacao da funcao
 def optimize(w, b, X, Y, num_iterations, learning_rate, print_cost=False):
     costs = []
@@ -29,17 +31,19 @@ def optimize(w, b, X, Y, num_iterations, learning_rate, print_cost=False):
         if i % 100 == 0:
             costs.append(cost)
         if print_cost and i % 100 == 0:
-            print("Cost after iteration %i: %f" % (i, cost))
+            print(f"Cost after iteration {i}: {cost}")
     params = {"w": w,
               "b": b}
-    grads = {"dw": dw,
-             "db": db}
+    grads = {"dw": dw,  # noqa
+             "db": db}  # noqa
     return params, grads, costs
 
-##calcular sigmoide
+
+## calcular sigmoide
 def sigmoid(z):
     s = 1 / (1 + np.exp(-z))
     return s
+
 
 ##funcao de previsao que vai prever se a imagem é um gato ou nao
 ##onde será 0 se o valor for <= 0,5
@@ -58,6 +62,7 @@ def predict(w, b, X):
     assert (Y_prediction.shape == (1, m))
     return Y_prediction
 
+
 ##inicializando parametros com valores 0
 def initialize_with_zeros(dim):
     w = np.zeros((dim, 1))
@@ -65,6 +70,7 @@ def initialize_with_zeros(dim):
     assert (w.shape == (dim, 1))
     assert (isinstance(b, float) or isinstance(b, int))
     return w, b
+
 
 ##Carregando os dados
 def load_dataset():
@@ -81,6 +87,7 @@ def load_dataset():
     test_set_y_orig = test_set_y_orig.reshape((1, test_set_y_orig.shape[0]))
 
     return train_set_x_orig, train_set_y_orig, test_set_x_orig, test_set_y_orig, classes
+
 
 ##metodo principal
 def model(X_train, Y_train, X_test, Y_test, num_iterations=2000, learning_rate=0.5, print_cost=False):
@@ -105,7 +112,8 @@ def model(X_train, Y_train, X_test, Y_test, num_iterations=2000, learning_rate=0
          "num_iterations": num_iterations}
     return d
 
-#----------------------------PRE PROCESSAMENTO--------------------------------#
+
+# ----------------------------PRE PROCESSAMENTO--------------------------------#
 
 train_set_x_orig, train_set_y, test_set_x_orig, test_set_y, classes = load_dataset()
 
@@ -117,12 +125,12 @@ test_set_x_flatten = test_set_x_orig.reshape(test_set_x_orig.shape[0], -1).T
 
 ## padronizar o conjunto de dados
 
-train_set_x  =  train_set_x_flatten / 255.
-test_set_x  =  test_set_x_flatten / 255.
+train_set_x = train_set_x_flatten / 255.
+test_set_x = test_set_x_flatten / 255.
 
-#--------------------------FIM DO PRE PROCESSAMENTO---------------------------------------------------#
+# --------------------------FIM DO PRE PROCESSAMENTO---------------------------------------------------#
 
-d = model(train_set_x, train_set_y, test_set_x, test_set_y, num_iterations = 2200, learning_rate = 0.001, print_cost = False)
+d = model(train_set_x, train_set_y, test_set_x, test_set_y, num_iterations=2200, learning_rate=0.001, print_cost=False)
 
 ##funcao de custo do gradiente
 costs = np.squeeze(d['costs'])
@@ -130,14 +138,12 @@ plt.plot(costs)
 plt.ylabel('cost')
 plt.xlabel('iterations (per hundreds)')
 plt.title("Learning rate =" + str(d["learning_rate"]))
-#plt.show()
+# plt.show()
 
 from sklearn import metrics
 
-c_matrix = metrics.confusion_matrix(test_set_y[0].astype(int),d['Y_prediction_test'][0].astype(int))
+c_matrix = metrics.confusion_matrix(test_set_y[0].astype(int), d['Y_prediction_test'][0].astype(int))
 
 disp = ConfusionMatrixDisplay(confusion_matrix=c_matrix)
 disp.plot()
 plt.show()
-
-
