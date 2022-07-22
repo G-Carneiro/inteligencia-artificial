@@ -68,11 +68,11 @@ def initialize_with_zeros(dim):
 
 ##Carregando os dados
 def load_dataset():
-    with h5py.File('train_catvnoncat.h5', "r") as train_dataset:
+    with h5py.File('data/train_catvnoncat.h5', "r") as train_dataset:
         train_set_x_orig = np.array(train_dataset["train_set_x"][:])
         train_set_y_orig = np.array(train_dataset["train_set_y"][:])
 
-    with h5py.File('test_catvnoncat.h5', "r") as test_dataset:
+    with h5py.File('data/test_catvnoncat.h5', "r") as test_dataset:
         test_set_x_orig = np.array(test_dataset["test_set_x"][:])
         test_set_y_orig = np.array(test_dataset["test_set_y"][:])
         classes = np.array(test_dataset["list_classes"][:])
@@ -122,7 +122,7 @@ test_set_x  =  test_set_x_flatten / 255.
 
 #--------------------------FIM DO PRE PROCESSAMENTO---------------------------------------------------#
 
-d = model(train_set_x, train_set_y, test_set_x, test_set_y, num_iterations = 2000, learning_rate = 0.005, print_cost = False)
+d = model(train_set_x, train_set_y, test_set_x, test_set_y, num_iterations = 2200, learning_rate = 0.001, print_cost = False)
 
 ##funcao de custo do gradiente
 costs = np.squeeze(d['costs'])
