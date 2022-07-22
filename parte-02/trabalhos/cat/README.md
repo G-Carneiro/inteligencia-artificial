@@ -15,3 +15,10 @@ Este exercício pode ser feito em qualquer linguagem/ambiente.
 
 Experimente resolver o problema com um perceptron apenas (regressão logística), uma rede de camada rasa e uma rede convolucional (esta última é opcional).
 Além da demonstração das redes funcionando, um Relatório completo deve ser entregue, contendo informações de Quantos e Quais experimentos foram feitos até chegar no resultado final; Como foi o treinamento; Qual a taxa de acertos da rede; A matriz de confusão, etc...
+
+
+## Regressão Logística
+
+## Rede de camada rasa
+
+## Rede Convolucional
