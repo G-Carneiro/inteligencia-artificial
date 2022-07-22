@@ -68,11 +68,11 @@ def initialize_with_zeros(dim):
 
 ##Carregando os dados
 def load_dataset():
-    with h5py.File('data/train_catvnoncat.h5', "r") as train_dataset:
+    with h5py.File('train_catvnoncat.h5', "r") as train_dataset:
         train_set_x_orig = np.array(train_dataset["train_set_x"][:])
         train_set_y_orig = np.array(train_dataset["train_set_y"][:])
 
-    with h5py.File('data/test_catvnoncat.h5', "r") as test_dataset:
+    with h5py.File('test_catvnoncat.h5', "r") as test_dataset:
         test_set_x_orig = np.array(test_dataset["test_set_x"][:])
         test_set_y_orig = np.array(test_dataset["test_set_y"][:])
         classes = np.array(test_dataset["list_classes"][:])
@@ -134,10 +134,16 @@ plt.title("Learning rate =" + str(d["learning_rate"]))
 
 from sklearn import metrics
 
-c_matrix = metrics.confusion_matrix(test_set_y[0].astype(int),d['Y_prediction_test'][0].astype(int))
+##matriz de confusao de teste
+c_matrixTeste = metrics.confusion_matrix(test_set_y[0].astype(int),d['Y_prediction_test'][0].astype(int))
+disp = ConfusionMatrixDisplay(confusion_matrix=c_matrixTeste)
 
-disp = ConfusionMatrixDisplay(confusion_matrix=c_matrix)
+##matriz de confusao de treinamento
+c_matrixTreinamento = metrics.confusion_matrix(train_set_y[0].astype(int),d['Y_prediction_train'][0].astype(int))
+disp1 = ConfusionMatrixDisplay(confusion_matrix=c_matrixTreinamento)
+
 disp.plot()
+disp1.plot()
 plt.show()
 
 
