@@ -18,7 +18,6 @@ def propagate(w, b, X, Y):
              "db": db}
     return grads, cost
 
-
 ##otimizacao da funcao
 def optimize(w, b, X, Y, num_iterations, learning_rate, print_cost=False):
     costs = []
@@ -34,8 +33,8 @@ def optimize(w, b, X, Y, num_iterations, learning_rate, print_cost=False):
             print(f"Cost after iteration {i}: {cost}")
     params = {"w": w,
               "b": b}
-    grads = {"dw": dw,  # noqa
-             "db": db}  # noqa
+    grads = {"dw": dw,
+             "db": db}
     return params, grads, costs
 
 
@@ -142,8 +141,16 @@ plt.title("Learning rate =" + str(d["learning_rate"]))
 
 from sklearn import metrics
 
-c_matrix = metrics.confusion_matrix(test_set_y[0].astype(int), d['Y_prediction_test'][0].astype(int))
+##matriz de confusao de teste
+c_matrixTeste = metrics.confusion_matrix(test_set_y[0].astype(int),d['Y_prediction_test'][0].astype(int))
+disp = ConfusionMatrixDisplay(confusion_matrix=c_matrixTeste)
 
-disp = ConfusionMatrixDisplay(confusion_matrix=c_matrix)
+##matriz de confusao de treinamento
+c_matrixTreinamento = metrics.confusion_matrix(train_set_y[0].astype(int),d['Y_prediction_train'][0].astype(int))
+disp1 = ConfusionMatrixDisplay(confusion_matrix=c_matrixTreinamento)
+
 disp.plot()
+disp1.plot()
 plt.show()
+
+
