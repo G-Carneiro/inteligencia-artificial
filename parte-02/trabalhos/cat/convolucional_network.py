@@ -2,7 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import tensorflow as tf
 from h5py import File
-from keras import layers
+from keras.layers import Dense, Flatten
+from keras.models import Sequential
 from keras.utils import to_categorical
 from sklearn.metrics import ConfusionMatrixDisplay, accuracy_score
 
@@ -29,12 +30,12 @@ y_test = to_categorical(y_test, num_classes)
 
 lrate = tf.keras.callbacks.LearningRateScheduler(exp_decay)
 callback = tf.keras.callbacks.EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=20)
-modelo = tf.keras.Sequential()
-modelo.add(layers.Flatten())
-modelo.add(layers.Dense(200, kernel_initializer="random_uniform",
-                        bias_initializer="random_uniform", activation="tanh"))
-modelo.add(layers.Dense(2, kernel_initializer="random_uniform",
-                        bias_initializer="random_uniform", activation="softmax"))
+modelo = Sequential()
+modelo.add(Flatten())
+modelo.add(Dense(200, kernel_initializer="random_uniform",
+                 bias_initializer="random_uniform", activation="tanh"))
+modelo.add(Dense(2, kernel_initializer="random_uniform",
+                 bias_initializer="random_uniform", activation="softmax"))
 
 
 opt = tf.keras.optimizers.SGD(momentum=0.1)
@@ -52,8 +53,8 @@ loss = results.history['loss']
 val_loss = results.history['val_loss']
 epochs = range(1, len(acc) + 1)
 
-plt.plot(epochs, acc, 'b', label= 'Training accuracy')
-plt.plot(epochs, val_acc, 'r', label= 'Validation accuracy')
+plt.plot(epochs, acc, 'b', label='Training accuracy')
+plt.plot(epochs, val_acc, 'r', label='Validation accuracy')
 plt.title('Training and Validation accuracy')
 plt.legend()
 
@@ -63,8 +64,9 @@ plt.plot(epochs, val_loss, 'r', label='Validation loss')
 plt.title('Training and Validation loss')
 plt.legend()
 
-plt.show()
 
 y_test_pred = modelo.predict(x_test)
 print('\nAccuracy: {:.4f}\n'.format(accuracy_score(y_test.argmax(axis=1), y_test_pred.argmax(axis=1))))
 ConfusionMatrixDisplay.from_predictions(y_test.argmax(axis=1), y_test_pred.argmax(axis=1))
+
+plt.show()

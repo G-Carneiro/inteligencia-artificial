@@ -1,8 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from h5py import File
-from keras import layers
-from keras.layers import Dense
+from keras.layers import Dense, Flatten
 from keras.models import Sequential
 from keras.utils import to_categorical
 from sklearn.metrics import ConfusionMatrixDisplay, accuracy_score
@@ -28,7 +27,7 @@ y_train = to_categorical(y_train, num_classes)
 y_test = to_categorical(y_test, num_classes)
 
 model = Sequential()
-model.add(layers.Flatten())
+model.add(Flatten())
 model.add(Dense(100, kernel_initializer="random_uniform",
                 bias_initializer="random_uniform", activation="tanh"))
 model.add(Dense(2, kernel_initializer="random_uniform",
@@ -45,7 +44,7 @@ num_train = np.size(xtr, 0)
 print(num_train)
 
 results = model.fit(xtr, ytr, validation_data=(xval, yval),
-                    batch_size=64, epochs=200, verbose=1)
+                    batch_size=64, epochs=200, verbose=0)
 
 acc = results.history['accuracy']
 val_acc = results.history['val_accuracy']
@@ -53,6 +52,7 @@ loss = results.history['loss']
 val_loss = results.history['val_loss']
 epochs = range(1, len(acc) + 1)
 
+plt.figure()
 plt.plot(epochs, acc, 'b', label='Training accuracy')
 plt.plot(epochs, val_acc, 'r', label='Validation accuracy')
 plt.title('Training and Validation accuracy')
@@ -64,8 +64,9 @@ plt.plot(epochs, val_loss, 'r', label='Validation loss')
 plt.title('Training and Validation loss')
 plt.legend()
 
-plt.show()
 
 y_test_pred = model.predict(x_test)
 print('\nAccuracy: {:.4f}\n'.format(accuracy_score(y_test.argmax(axis=1), y_test_pred.argmax(axis=1))))
 ConfusionMatrixDisplay.from_predictions(y_test.argmax(axis=1), y_test_pred.argmax(axis=1))
+
+plt.show()
