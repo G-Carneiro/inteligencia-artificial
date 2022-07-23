@@ -56,13 +56,13 @@ A taxa de acerto para dos dados de treino foi de cerca de 91%, já a taxa de ace
 
 ### Matriz de Confusão (Treino)
 
-A seguir temos a matriz de confusão de treinamento, onde das 209 imagens de gatos dos dados de treinamento o perceptron acertou 192 imagens, o que para os dados de treinamento para a regressão logística, 91% é um número bom de acertos.
+Na figura 1 temos a matriz de confusão de treinamento, onde das 209 imagens de gatos dos dados de treinamento o perceptron acertou 192 imagens, o que para os dados de treinamento para a regressão logística, 91% é um número bom de acertos.
 
 ![Matriz de confusão (treino) - Regressão Logística](img/reg_log_train.png)
 
 ### Matriz de Confusão (Teste)
 
-Logo abaixo temos a matriz de confusão dos dados de teste, para termos uma visão melhor do resultado, onde podemos notar que o perceptron acertou 35 das 50 fotos de gatos nos dados de teste, o que é um resultado bom para um perceptron.
+Na figura 2 temos a matriz de confusão dos dados de teste, para termos uma visão melhor do resultado, onde podemos notar que o perceptron acertou 35 das 50 fotos de gatos nos dados de teste, o que é um resultado bom para um perceptron.
 
 ![Matriz de confusão (teste) - Regressão Logística](img/reg_log_test.png)
 
@@ -83,13 +83,13 @@ O pior cenário encontrado foi com 65% para treino e 35% para teste.
 
 ### Matriz de Confusão (Treino)
 
-Segue um exemplo obtido em uma das execuções:
+A figura 3 mostra um exemplo obtido em uma das execuções:
 
 ![Matriz de confusão (treino) - Camada Rasa](img/neural_net_trains.png)
 
 ### Matriz de Confusão (Teste)
 
-Segue um exemplo obtido em uma das execuções:
+A figura 4 mostra um exemplo obtido em uma das execuções:
 
 ![Matriz de confusão (teste) - Camada Rasa](img/neural_net_test.png)
 
