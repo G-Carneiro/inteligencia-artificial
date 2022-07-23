@@ -37,6 +37,12 @@ python3 neural_network.py
 python3 convolucional_network.py
 ```
 
+Caso tenha algum problema em algum dos arquivos, instale as dependências com
+
+```shell
+pip install -r requirements.txt
+```
+
 
 ## Regressão Logística
 
