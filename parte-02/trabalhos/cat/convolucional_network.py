@@ -66,6 +66,12 @@ plt.legend()
 
 
 y_test_pred = modelo.predict(x_test)
+y_train_pred = modelo.predict(x_train)
+
+print('\nAccuracy: {:.4f}\n'.format(accuracy_score(y_train.argmax(axis=1), y_train_pred.argmax(axis=1))))
+ConfusionMatrixDisplay.from_predictions(y_train.argmax(axis=1), y_train_pred.argmax(axis=1))
+
+
 print('\nAccuracy: {:.4f}\n'.format(accuracy_score(y_test.argmax(axis=1), y_test_pred.argmax(axis=1))))
 ConfusionMatrixDisplay.from_predictions(y_test.argmax(axis=1), y_test_pred.argmax(axis=1))
 

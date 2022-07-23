@@ -152,5 +152,3 @@ disp1 = ConfusionMatrixDisplay(confusion_matrix=c_matrixTreinamento)
 disp.plot()
 disp1.plot()
 plt.show()
-
-

@@ -44,7 +44,7 @@ num_train = np.size(xtr, 0)
 print(num_train)
 
 results = model.fit(xtr, ytr, validation_data=(xval, yval),
-                    batch_size=64, epochs=200, verbose=0)
+                    batch_size=64, epochs=200, verbose=1)
 
 acc = results.history['accuracy']
 val_acc = results.history['val_accuracy']
@@ -66,6 +66,11 @@ plt.legend()
 
 
 y_test_pred = model.predict(x_test)
+y_train_pred = model.predict(x_train)
+
+print('\nAccuracy: {:.4f}\n'.format(accuracy_score(y_train.argmax(axis=1), y_train_pred.argmax(axis=1))))
+ConfusionMatrixDisplay.from_predictions(y_train.argmax(axis=1), y_train_pred.argmax(axis=1))
+
 print('\nAccuracy: {:.4f}\n'.format(accuracy_score(y_test.argmax(axis=1), y_test_pred.argmax(axis=1))))
 ConfusionMatrixDisplay.from_predictions(y_test.argmax(axis=1), y_test_pred.argmax(axis=1))
 
