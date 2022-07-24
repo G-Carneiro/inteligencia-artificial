@@ -26,7 +26,7 @@ _class: invert
 - Objeto retangular de altura fixa.
 
 ---
-### Solução: _Botton-left_
+### _Botton-left_
 
 ![](img/bottom-left.png)
 
@@ -47,11 +47,63 @@ _class: invert
 - $Q (n \times m)$.
   - $n$ quantidade de tipos de peça.
   - $m$ tamanho total da sequência.
+- $Q_{ij}$ representa o benefício do uso de uma peça do tipo $i$ na posição $j$.
+- A matriz é atualiza a cada solução gerada.
+
+![](img/att_matrix.png)
+
+---
+![](img/algoritmo.png)
 
 ---
 ## Transferência de aprendizado
 
+- A maioria das peças são similares.
+  - Criar matriz de aprendizado e repassar para novas soluções.
+- Matriz de aprendizado precisa ser redimensionada.
+- Iterações puramente aleatórias (adaptação ao novo exemplar).
 
+---
+![](img/algoritmo_2.png)
+
+---
+## Comparativo
+
+- Aprendizado por reforço (R).
+  - 700 segundos.
+- Transferência de aprendizado (T).
+  - 600 segundos para geração de $Q$.
+  - 100 segundos no algoritmo 2.
+
+---
+## Comparativo
+
+- 10 exemplares.
+  - 5 de peças convexas (rco).
+  - 5 com peças côncavas (blazewicz).
+
+![](img/exemplares_tab.png)
+
+---
+![](img/exemplares.png)
+
+- Exemplares côncavos tiveram menos iterações.
+  - Maior possibilidade de posições devido aos vértices.
+
+---
+### Resultados
+
+![](img/resultados.png)
+
+---
+## Conclusão
+
+- Peças côncavas exigem maior esforço para solução.
+- Transferência de aprendizado traz vantagens.
+  - Desempenho similar ao aprendizado por reforço, com tempo de execução menor.
+- A medida que nº de exemplares cresce, a transferência encontrou melhores comprimentos mínimos.
 
 ---
 ## Referências
+
+- Bartmeyer, P., Oliveira, L., Toledo, F. e Leão, A. (2021). [Aprendizado por reforço aplicado ao problema de empacotamento de peças irregulares em faixas](https://repositorio.usp.br/directbitstream/455094df-864a-4fad-8a97-c5f59fd3d6ca/3051981.pdf). **LIII Simpósio Brasileiro de Pesquisa Operacional**.
