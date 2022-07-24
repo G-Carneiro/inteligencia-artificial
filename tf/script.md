@@ -36,6 +36,10 @@ _class: invert
 - Baseado na qualidade das decisões tomadas.
   - Decisões serão analisadas e receberão recompensas e penalidades.
 - Recompensas podem ser iguais independentes da qualidade da solução ou não. 
+
+---
+## Aprendizado por reforço
+
 - Analise pode ser feita passo a passo ou ao final da solução.
   - Com alto número de repetições é possível superar as limitações de cada método.
 - _Q-learning_.
@@ -61,10 +65,11 @@ _class: invert
 - A maioria das peças são similares.
   - Criar matriz de aprendizado e repassar para novas soluções.
 - Matriz de aprendizado precisa ser redimensionada.
-- Iterações puramente aleatórias (adaptação ao novo exemplar).
+- Iterações puramente aleatórias 
+  - Adaptação ao novo exemplar.
 
 ---
-![](img/algoritmo_2.png)
+![w:700 h:650](img/algoritmo_2.png)
 
 ---
 ## Comparativo
@@ -85,6 +90,8 @@ _class: invert
 ![](img/exemplares_tab.png)
 
 ---
+## Comparativo
+
 ![](img/exemplares.png)
 
 - Exemplares côncavos tiveram menos iterações.
