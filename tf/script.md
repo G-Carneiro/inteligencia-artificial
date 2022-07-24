@@ -114,3 +114,4 @@ _class: invert
 ## Referências
 
 - Bartmeyer, P., Oliveira, L., Toledo, F. e Leão, A. (2021). [Aprendizado por reforço aplicado ao problema de empacotamento de peças irregulares em faixas](https://repositorio.usp.br/directbitstream/455094df-864a-4fad-8a97-c5f59fd3d6ca/3051981.pdf). **LIII Simpósio Brasileiro de Pesquisa Operacional**.
+- Watkins, C. J. e Dayan, P. (1992). Q-learning. Machine learning, 8(3-4):279–292.
