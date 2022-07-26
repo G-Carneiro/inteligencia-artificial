@@ -46,7 +46,7 @@
 
 #. Conhecendo as técnicas de IA (Simbólica, Neural, Evolucionária e Nebulosa), diga como você poderia analisar um problema a fim de selecionar qual a técnica de IA mais apropriada para tentar achar a solução do problema. Isto é: que características o problema deve ter que indicam a técnica mais adequada de solução.
 
-    - Nebulosa: medidas subjetivas. Ex.: quão alta é essa pessoa? Pessoa ser considerada velha. Risco de projetos.
+    - Nebulosa: medidas subjetivas. Controlar algo, como o grau de uma curva). Ex.: quão alta é essa pessoa? Pessoa ser considerada velha. Risco de projetos.
     - Conexionista: processamento de imagem, reconhecimento de fala, recuperação de informações. Difícil saber o processo para chegar ao resultado.
     - Simbólica: capaz de manifestar um comportamento inteligente. Permite explicar o processo que levou ao resultado.
-    - Genético: alocação de tarefas, seleção de rotas, otimização, problemas com solução de estado final (não um caminho).
+    - Genético: alocação de tarefas, seleção de rotas, otimização, problemas com solução de estado final (não um caminho). Usar apenas se não for possível resolver de forma analítica ou com gradiente.
